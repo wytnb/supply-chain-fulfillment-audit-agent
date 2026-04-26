@@ -17,6 +17,12 @@ class MCPConfig:
     default_timezone: str = "+08:00"
     enable_ephemeral_ticket_write: bool = True
     server_name: str = "supplychain-fulfillment-mcp-server"
+    default_transport: str = "stdio"
+    host: str = "127.0.0.1"
+    port: int = 8000
+    streamable_http_path: str = "/mcp"
+    json_response: bool = True
+    stateless_http: bool = True
 
 
 def _resolve_project_root() -> Path:

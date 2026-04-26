@@ -2,10 +2,12 @@
 
 from __future__ import annotations
 
+import argparse
 from dataclasses import dataclass
+from dataclasses import replace
 from functools import partial
 import inspect
-from typing import Any, Callable
+from typing import Any, Callable, Sequence
 
 from mcp.server.fastmcp import FastMCP
 
@@ -417,7 +419,14 @@ def create_server(
 ) -> FastMCP:
     resolved_config = config or get_config()
     resolved_repository = repository or MockDataRepository(resolved_config)
-    server = FastMCP(name=resolved_config.server_name)
+    server = FastMCP(
+        name=resolved_config.server_name,
+        host=resolved_config.host,
+        port=resolved_config.port,
+        streamable_http_path=resolved_config.streamable_http_path,
+        json_response=resolved_config.json_response,
+        stateless_http=resolved_config.stateless_http,
+    )
     for spec in TOOL_SPECS:
         server.add_tool(
             _make_tool_callable(spec, repository=resolved_repository, config=resolved_config),
@@ -427,8 +436,91 @@ def create_server(
     return server
 
 
-def main() -> None:
-    create_server().run("stdio")
+def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
+    base_config = get_config()
+    parser = argparse.ArgumentParser(
+        prog="supplychain-fulfillment-mcp",
+        description="Run the supply chain fulfillment MCP mock server over stdio or HTTP.",
+    )
+    parser.add_argument(
+        "--transport",
+        choices=("stdio", "http"),
+        default=base_config.default_transport,
+        help="Transport to use for the MCP server.",
+    )
+    parser.add_argument(
+        "--host",
+        default=base_config.host,
+        help="Host to bind when running over HTTP transport.",
+    )
+    parser.add_argument(
+        "--port",
+        type=int,
+        default=base_config.port,
+        help="Port to bind when running over HTTP transport.",
+    )
+    parser.add_argument(
+        "--path",
+        default=base_config.streamable_http_path,
+        help="HTTP path for the streamable MCP endpoint.",
+    )
+    parser.add_argument(
+        "--json-response",
+        action=argparse.BooleanOptionalAction,
+        default=base_config.json_response,
+        help="Enable JSON HTTP responses for streamable-http transport.",
+    )
+    parser.add_argument(
+        "--stateless-http",
+        action=argparse.BooleanOptionalAction,
+        default=base_config.stateless_http,
+        help="Enable stateless HTTP mode for streamable-http transport.",
+    )
+    return parser.parse_args(argv)
 
 
-__all__ = ["ToolSpec", "create_server", "get_tool_specs", "main"]
+def build_runtime_config(
+    args: argparse.Namespace,
+    *,
+    base_config: MCPConfig | None = None,
+) -> MCPConfig:
+    current = base_config or get_config()
+    path = args.path if args.path.startswith("/") else f"/{args.path}"
+    return replace(
+        current,
+        default_transport=args.transport,
+        host=args.host,
+        port=args.port,
+        streamable_http_path=path,
+        json_response=args.json_response,
+        stateless_http=args.stateless_http,
+    )
+
+
+def resolve_fastmcp_transport(transport: str) -> str:
+    return "streamable-http" if transport == "http" else "stdio"
+
+
+def run_server(config: MCPConfig) -> None:
+    create_server(config=config).run(resolve_fastmcp_transport(config.default_transport))
+
+
+def main(argv: Sequence[str] | None = None) -> None:
+    args = parse_args(argv)
+    run_server(build_runtime_config(args))
+
+
+__all__ = [
+    "ToolSpec",
+    "build_runtime_config",
+    "create_server",
+    "get_tool_specs",
+    "main",
+    "parse_args",
+    "resolve_fastmcp_transport",
+    "run_server",
+]
+
+
+if __name__ == "__main__":
+    main()

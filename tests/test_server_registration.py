@@ -40,3 +40,13 @@ async def test_every_tool_schema_includes_common_metadata_fields() -> None:
         tool.name: tool.inputSchema for tool in await server.list_tools()
     }["oms_get_order_detail"]
     assert "order_no" in order_detail["required"]
+
+
+def test_http_defaults_are_exposed_on_server_settings() -> None:
+    server = create_server()
+
+    assert server.settings.host == "127.0.0.1"
+    assert server.settings.port == 8000
+    assert server.settings.streamable_http_path == "/mcp"
+    assert server.settings.json_response is True
+    assert server.settings.stateless_http is True
