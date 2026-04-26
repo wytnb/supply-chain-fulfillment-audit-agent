@@ -1,0 +1,92 @@
+[
+  {
+    "order_no": "O-20260420-1001",
+    "sku_code": "SKU-1001",
+    "lock_status": "LOCK_SUCCESS",
+    "required_qty": 1,
+    "locked_qty": 1,
+    "shortage_qty": 0,
+    "lock_failed_reason": null
+  },
+  {
+    "order_no": "O-20260424-1002",
+    "sku_code": "SKU-1003",
+    "lock_status": "LOCK_FAILED",
+    "required_qty": 2,
+    "locked_qty": 0,
+    "shortage_qty": 2,
+    "lock_failed_reason": "available_qty_is_zero"
+  },
+  {
+    "order_no": "O-20260421-1003",
+    "sku_code": "SKU-1004",
+    "lock_status": "LOCK_SUCCESS",
+    "required_qty": 2,
+    "locked_qty": 2,
+    "shortage_qty": 0,
+    "lock_failed_reason": null
+  },
+  {
+    "order_no": "O-20260421-1003",
+    "sku_code": "SKU-1002",
+    "lock_status": "LOCK_SUCCESS",
+    "required_qty": 1,
+    "locked_qty": 1,
+    "shortage_qty": 0,
+    "lock_failed_reason": null
+  },
+  {
+    "order_no": "O-20260424-1004",
+    "sku_code": "SKU-1006",
+    "lock_status": "LOCK_SUCCESS",
+    "required_qty": 1,
+    "locked_qty": 1,
+    "shortage_qty": 0,
+    "lock_failed_reason": null
+  },
+  {
+    "order_no": "O-20260423-1005",
+    "sku_code": "SKU-1005",
+    "lock_status": "LOCK_SUCCESS",
+    "required_qty": 2,
+    "locked_qty": 2,
+    "shortage_qty": 0,
+    "lock_failed_reason": null
+  },
+  {
+    "order_no": "O-20260423-1005",
+    "sku_code": "SKU-1002",
+    "lock_status": "LOCK_SUCCESS",
+    "required_qty": 1,
+    "locked_qty": 1,
+    "shortage_qty": 0,
+    "lock_failed_reason": null
+  },
+  {
+    "order_no": "O-20260422-1006",
+    "sku_code": "SKU-1002",
+    "lock_status": "LOCK_SUCCESS",
+    "required_qty": 1,
+    "locked_qty": 1,
+    "shortage_qty": 0,
+    "lock_failed_reason": null
+  },
+  {
+    "order_no": "O-20260422-1006",
+    "sku_code": "SKU-1003",
+    "lock_status": "LOCK_SUCCESS",
+    "required_qty": 1,
+    "locked_qty": 1,
+    "shortage_qty": 0,
+    "lock_failed_reason": null
+  },
+  {
+    "order_no": "O-20260423-1008",
+    "sku_code": "SKU-1006",
+    "lock_status": "LOCK_SUCCESS",
+    "required_qty": 1,
+    "locked_qty": 1,
+    "shortage_qty": 0,
+    "lock_failed_reason": null
+  }
+]

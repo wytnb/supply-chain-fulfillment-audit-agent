@@ -1,0 +1,26 @@
+[
+  {
+    "carrier_code": "SF",
+    "carrier_name": "顺丰速运",
+    "service_level": "EXPRESS",
+    "default_sla_hours": 36,
+    "remote_area_extra_hours": 24,
+    "support_compensation": true
+  },
+  {
+    "carrier_code": "YTO",
+    "carrier_name": "圆通速递",
+    "service_level": "STANDARD",
+    "default_sla_hours": 48,
+    "remote_area_extra_hours": 24,
+    "support_compensation": true
+  },
+  {
+    "carrier_code": "JD",
+    "carrier_name": "京东快递",
+    "service_level": "SAME_DAY",
+    "default_sla_hours": 12,
+    "remote_area_extra_hours": 12,
+    "support_compensation": true
+  }
+]

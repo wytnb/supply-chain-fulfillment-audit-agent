@@ -1,0 +1,204 @@
+[
+  {
+    "trace_id": "TRACE-D01-20260426-0001",
+    "request_id": "REQ-D01-20260426-0001",
+    "step_no": 1,
+    "tool_name": "oms_get_order_detail",
+    "input": {
+      "order_no": "O-20260420-1001"
+    },
+    "output_summary": "订单已支付，承诺发货时间已超时，当前仍待仓库处理。",
+    "success": true,
+    "code": "OK",
+    "created_time": "2026-04-26T10:01:00+08:00"
+  },
+  {
+    "trace_id": "TRACE-D01-20260426-0001",
+    "request_id": "REQ-D01-20260426-0001",
+    "step_no": 2,
+    "tool_name": "wms_get_order_warehouse_progress",
+    "input": {
+      "order_no": "O-20260420-1001"
+    },
+    "output_summary": "仓内任务停留在 PICKING，异常类型为 picking_timeout。",
+    "success": true,
+    "code": "OK",
+    "created_time": "2026-04-26T10:01:03+08:00"
+  },
+  {
+    "trace_id": "TRACE-D01-20260426-0001",
+    "request_id": "REQ-D01-20260426-0001",
+    "step_no": 3,
+    "tool_name": "ticket_create_exception_ticket",
+    "input": {
+      "order_no": "O-20260420-1001",
+      "exception_type": "order_not_shipped_timeout"
+    },
+    "output_summary": "已生成仓库异常工单草稿 TK-20260426-5001。",
+    "success": true,
+    "code": "OK",
+    "created_time": "2026-04-26T10:01:08+08:00"
+  },
+  {
+    "trace_id": "TRACE-D02-20260426-0002",
+    "request_id": "REQ-D02-20260426-0002",
+    "step_no": 1,
+    "tool_name": "oms_get_order_items",
+    "input": {
+      "order_no": "O-20260424-1002"
+    },
+    "output_summary": "订单包含 SKU-1003 两件。",
+    "success": true,
+    "code": "OK",
+    "created_time": "2026-04-26T10:02:00+08:00"
+  },
+  {
+    "trace_id": "TRACE-D02-20260426-0002",
+    "request_id": "REQ-D02-20260426-0002",
+    "step_no": 2,
+    "tool_name": "wms_get_inventory_lock_detail",
+    "input": {
+      "order_no": "O-20260424-1002"
+    },
+    "output_summary": "锁库失败，required_qty=2，shortage_qty=2，原因 available_qty_is_zero。",
+    "success": true,
+    "code": "OK",
+    "created_time": "2026-04-26T10:02:04+08:00"
+  },
+  {
+    "trace_id": "TRACE-D02-20260426-0002",
+    "request_id": "REQ-D02-20260426-0002",
+    "step_no": 3,
+    "tool_name": "ticket_create_exception_ticket",
+    "input": {
+      "order_no": "O-20260424-1002",
+      "exception_type": "inventory_shortage"
+    },
+    "output_summary": "已生成库存异常工单草稿 TK-20260426-5002。",
+    "success": true,
+    "code": "OK",
+    "created_time": "2026-04-26T10:02:10+08:00"
+  },
+  {
+    "trace_id": "TRACE-D03-20260426-0003",
+    "request_id": "REQ-D03-20260426-0003",
+    "step_no": 1,
+    "tool_name": "tms_check_tracking_stagnation",
+    "input": {
+      "waybill_no": "WB-20260422-1006"
+    },
+    "output_summary": "运单超过 SLA 且最后轨迹已停滞超过 72 小时。",
+    "success": true,
+    "code": "OK",
+    "created_time": "2026-04-26T10:03:00+08:00"
+  },
+  {
+    "trace_id": "TRACE-D03-20260426-0003",
+    "request_id": "REQ-D03-20260426-0003",
+    "step_no": 2,
+    "tool_name": "settlement_calculate_timeout_penalty",
+    "input": {
+      "waybill_no": "WB-20260422-1006"
+    },
+    "output_summary": "计算得到超时 50 小时，扣罚金额封顶为 25。",
+    "success": true,
+    "code": "OK",
+    "created_time": "2026-04-26T10:03:06+08:00"
+  },
+  {
+    "trace_id": "TRACE-D03-20260426-0003",
+    "request_id": "REQ-D03-20260426-0003",
+    "step_no": 3,
+    "tool_name": "ticket_create_exception_ticket",
+    "input": {
+      "waybill_no": "WB-20260422-1006",
+      "exception_type": "tracking_stagnation"
+    },
+    "output_summary": "已生成物流异常工单 TK-20260426-5003。",
+    "success": true,
+    "code": "OK",
+    "created_time": "2026-04-26T10:03:11+08:00"
+  },
+  {
+    "trace_id": "TRACE-D04-20260426-0004",
+    "request_id": "REQ-D04-20260426-0004",
+    "step_no": 1,
+    "tool_name": "tms_get_delivery_status",
+    "input": {
+      "order_no": "O-20260424-1004"
+    },
+    "output_summary": "运单状态为 ABNORMAL_SIGNED，签收人为门卫代收，存在签收凭证。",
+    "success": true,
+    "code": "OK",
+    "created_time": "2026-04-26T10:04:00+08:00"
+  },
+  {
+    "trace_id": "TRACE-D04-20260426-0004",
+    "request_id": "REQ-D04-20260426-0004",
+    "step_no": 2,
+    "tool_name": "settlement_calculate_compensation",
+    "input": {
+      "order_no": "O-20260424-1004",
+      "exception_type": "abnormal_signed"
+    },
+    "output_summary": "建议赔付金额 899，但需人工确认和补全客户证据。",
+    "success": true,
+    "code": "OK",
+    "created_time": "2026-04-26T10:04:05+08:00"
+  },
+  {
+    "trace_id": "TRACE-D04-20260426-0004",
+    "request_id": "REQ-D04-20260426-0004",
+    "step_no": 3,
+    "tool_name": "ticket_create_exception_ticket",
+    "input": {
+      "order_no": "O-20260424-1004",
+      "exception_type": "abnormal_signed"
+    },
+    "output_summary": "已生成异常签收工单 TK-20260426-5004。",
+    "success": true,
+    "code": "OK",
+    "created_time": "2026-04-26T10:04:10+08:00"
+  },
+  {
+    "trace_id": "TRACE-D05-20260426-0005",
+    "request_id": "REQ-D05-20260426-0005",
+    "step_no": 1,
+    "tool_name": "settlement_calculate_freight",
+    "input": {
+      "waybill_no": "WB-20260423-1005"
+    },
+    "output_summary": "按 chargeable_weight_kg=12 计算系统运费为 106。",
+    "success": true,
+    "code": "OK",
+    "created_time": "2026-04-26T10:05:00+08:00"
+  },
+  {
+    "trace_id": "TRACE-D05-20260426-0005",
+    "request_id": "REQ-D05-20260426-0005",
+    "step_no": 2,
+    "tool_name": "settlement_audit_carrier_bill",
+    "input": {
+      "waybill_no": "WB-20260423-1005",
+      "carrier_bill_amount": 118
+    },
+    "output_summary": "识别账单差额 12，建议进入财务复核。",
+    "success": true,
+    "code": "OK",
+    "created_time": "2026-04-26T10:05:06+08:00"
+  },
+  {
+    "trace_id": "TRACE-D05-20260426-0005",
+    "request_id": "REQ-D05-20260426-0005",
+    "step_no": 3,
+    "tool_name": "ticket_create_exception_ticket",
+    "input": {
+      "waybill_no": "WB-20260423-1005",
+      "exception_type": "freight_bill_difference"
+    },
+    "output_summary": "已生成费用差异复核工单 TK-20260426-5005。",
+    "success": true,
+    "code": "OK",
+    "created_time": "2026-04-26T10:05:11+08:00"
+  }
+]

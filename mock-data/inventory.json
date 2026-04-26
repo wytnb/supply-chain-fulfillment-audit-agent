@@ -1,0 +1,74 @@
+[
+  {
+    "warehouse_code": "WH-SZ-01",
+    "sku_code": "SKU-1001",
+    "available_qty": 25,
+    "locked_qty": 1,
+    "on_hand_qty": 26,
+    "inventory_status": "NORMAL"
+  },
+  {
+    "warehouse_code": "WH-SH-01",
+    "sku_code": "SKU-1003",
+    "available_qty": 0,
+    "locked_qty": 0,
+    "on_hand_qty": 0,
+    "inventory_status": "OUT_OF_STOCK"
+  },
+  {
+    "warehouse_code": "WH-SZ-01",
+    "sku_code": "SKU-1004",
+    "available_qty": 12,
+    "locked_qty": 2,
+    "on_hand_qty": 14,
+    "inventory_status": "NORMAL"
+  },
+  {
+    "warehouse_code": "WH-HZ-01",
+    "sku_code": "SKU-1006",
+    "available_qty": 5,
+    "locked_qty": 1,
+    "on_hand_qty": 6,
+    "inventory_status": "LOW_STOCK"
+  },
+  {
+    "warehouse_code": "WH-SH-01",
+    "sku_code": "SKU-1005",
+    "available_qty": 30,
+    "locked_qty": 2,
+    "on_hand_qty": 32,
+    "inventory_status": "NORMAL"
+  },
+  {
+    "warehouse_code": "WH-SH-01",
+    "sku_code": "SKU-1002",
+    "available_qty": 18,
+    "locked_qty": 1,
+    "on_hand_qty": 19,
+    "inventory_status": "NORMAL"
+  },
+  {
+    "warehouse_code": "WH-SZ-01",
+    "sku_code": "SKU-1002",
+    "available_qty": 7,
+    "locked_qty": 1,
+    "on_hand_qty": 8,
+    "inventory_status": "LOW_STOCK"
+  },
+  {
+    "warehouse_code": "WH-SZ-01",
+    "sku_code": "SKU-1003",
+    "available_qty": 15,
+    "locked_qty": 1,
+    "on_hand_qty": 16,
+    "inventory_status": "NORMAL"
+  },
+  {
+    "warehouse_code": "WH-CD-01",
+    "sku_code": "SKU-1006",
+    "available_qty": 9,
+    "locked_qty": 1,
+    "on_hand_qty": 10,
+    "inventory_status": "NORMAL"
+  }
+]

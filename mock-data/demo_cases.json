@@ -1,0 +1,123 @@
+[
+  {
+    "demo_id": "D01",
+    "scenario_code": "late_shipment",
+    "user_input": {
+      "order_no": "O-20260420-1001"
+    },
+    "expected_tools": [
+      "oms_get_order_detail",
+      "oms_get_payment_status",
+      "wms_get_inventory_lock_detail",
+      "wms_get_order_warehouse_progress",
+      "wms_get_outbound_record",
+      "ticket_create_exception_ticket"
+    ],
+    "expected_rule_ids": [
+      "RAG-MVP-001"
+    ],
+    "expected_outputs": [
+      "识别订单超时未发货",
+      "定位仓内拣货超时",
+      "责任部门为 warehouse",
+      "生成客服回复建议和工单草稿"
+    ]
+  },
+  {
+    "demo_id": "D02",
+    "scenario_code": "inventory_shortage",
+    "user_input": {
+      "order_no": "O-20260424-1002"
+    },
+    "expected_tools": [
+      "oms_get_order_detail",
+      "oms_get_order_items",
+      "wms_get_inventory_snapshot",
+      "wms_get_inventory_lock_detail",
+      "ticket_create_exception_ticket"
+    ],
+    "expected_rule_ids": [
+      "RAG-MVP-002"
+    ],
+    "expected_outputs": [
+      "识别库存不足和锁库失败",
+      "建议补货、调拨或拆单",
+      "责任部门为 inventory_planning",
+      "生成库存异常工单草稿"
+    ]
+  },
+  {
+    "demo_id": "D03",
+    "scenario_code": "tracking_stagnation",
+    "user_input": {
+      "waybill_no": "WB-20260422-1006"
+    },
+    "expected_tools": [
+      "tms_get_shipment_detail",
+      "tms_get_tracking_events",
+      "tms_get_carrier_profile",
+      "tms_check_tracking_stagnation",
+      "settlement_calculate_timeout_penalty",
+      "ticket_create_exception_ticket"
+    ],
+    "expected_rule_ids": [
+      "RAG-MVP-003",
+      "RAG-EXT-002"
+    ],
+    "expected_outputs": [
+      "识别轨迹停滞",
+      "输出超时小时数和扣罚建议",
+      "责任部门为 logistics",
+      "生成催办建议"
+    ]
+  },
+  {
+    "demo_id": "D04",
+    "scenario_code": "abnormal_signed",
+    "user_input": {
+      "order_no": "O-20260424-1004"
+    },
+    "expected_tools": [
+      "oms_get_order_detail",
+      "tms_get_waybill_by_order",
+      "tms_get_delivery_status",
+      "tms_get_tracking_events",
+      "settlement_calculate_compensation",
+      "ticket_create_exception_ticket"
+    ],
+    "expected_rule_ids": [
+      "RAG-MVP-004"
+    ],
+    "expected_outputs": [
+      "识别异常签收",
+      "读取签收凭证和异常原因",
+      "输出赔付审核建议并要求人工确认",
+      "生成对客回复建议"
+    ]
+  },
+  {
+    "demo_id": "D05",
+    "scenario_code": "freight_bill_audit",
+    "user_input": {
+      "waybill_no": "WB-20260423-1005",
+      "carrier_bill_amount": 118
+    },
+    "expected_tools": [
+      "tms_get_shipment_detail",
+      "tms_get_carrier_profile",
+      "settlement_calculate_freight",
+      "settlement_get_fee_breakdown",
+      "settlement_audit_carrier_bill",
+      "ticket_create_exception_ticket"
+    ],
+    "expected_rule_ids": [
+      "RAG-MVP-005"
+    ],
+    "expected_outputs": [
+      "重算运费为 106",
+      "识别账单差额 12",
+      "责任部门为 finance",
+      "生成费用异议建议"
+    ]
+  }
+]

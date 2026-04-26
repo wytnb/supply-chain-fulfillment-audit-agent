@@ -1,0 +1,142 @@
+[
+  {
+    "waybill_no": "WB-20260422-1003A",
+    "event_time": "2026-04-22T09:40:00+08:00",
+    "event_type": "PICKED_UP",
+    "event_desc": "快件已揽收",
+    "event_city": "深圳"
+  },
+  {
+    "waybill_no": "WB-20260422-1003A",
+    "event_time": "2026-04-22T21:15:00+08:00",
+    "event_type": "IN_TRANSIT",
+    "event_desc": "快件已到达广州转运中心",
+    "event_city": "广州"
+  },
+  {
+    "waybill_no": "WB-20260422-1003A",
+    "event_time": "2026-04-23T11:20:00+08:00",
+    "event_type": "SIGNED",
+    "event_desc": "客户本人签收",
+    "event_city": "广州"
+  },
+  {
+    "waybill_no": "WB-20260422-1003B",
+    "event_time": "2026-04-22T09:45:00+08:00",
+    "event_type": "PICKED_UP",
+    "event_desc": "快件已揽收",
+    "event_city": "深圳"
+  },
+  {
+    "waybill_no": "WB-20260422-1003B",
+    "event_time": "2026-04-23T08:40:00+08:00",
+    "event_type": "OUT_FOR_DELIVERY",
+    "event_desc": "快件正在派送",
+    "event_city": "广州"
+  },
+  {
+    "waybill_no": "WB-20260422-1003B",
+    "event_time": "2026-04-23T15:05:00+08:00",
+    "event_type": "SIGNED",
+    "event_desc": "客户本人签收",
+    "event_city": "广州"
+  },
+  {
+    "waybill_no": "WB-20260424-1004",
+    "event_time": "2026-04-24T12:05:00+08:00",
+    "event_type": "PICKED_UP",
+    "event_desc": "骑手已取件",
+    "event_city": "杭州"
+  },
+  {
+    "waybill_no": "WB-20260424-1004",
+    "event_time": "2026-04-24T15:20:00+08:00",
+    "event_type": "ARRIVED_STATION",
+    "event_desc": "快件已到达西湖营业部",
+    "event_city": "杭州"
+  },
+  {
+    "waybill_no": "WB-20260424-1004",
+    "event_time": "2026-04-24T17:45:00+08:00",
+    "event_type": "OUT_FOR_DELIVERY",
+    "event_desc": "快件正在派送",
+    "event_city": "杭州"
+  },
+  {
+    "waybill_no": "WB-20260424-1004",
+    "event_time": "2026-04-24T18:26:00+08:00",
+    "event_type": "SIGNED",
+    "event_desc": "门卫代收签收",
+    "event_city": "杭州"
+  },
+  {
+    "waybill_no": "WB-20260423-1005",
+    "event_time": "2026-04-23T09:20:00+08:00",
+    "event_type": "PICKED_UP",
+    "event_desc": "快件已揽收",
+    "event_city": "上海"
+  },
+  {
+    "waybill_no": "WB-20260423-1005",
+    "event_time": "2026-04-24T08:50:00+08:00",
+    "event_type": "OUT_FOR_DELIVERY",
+    "event_desc": "快件正在派送",
+    "event_city": "苏州"
+  },
+  {
+    "waybill_no": "WB-20260423-1005",
+    "event_time": "2026-04-24T14:30:00+08:00",
+    "event_type": "SIGNED",
+    "event_desc": "客户本人签收",
+    "event_city": "苏州"
+  },
+  {
+    "waybill_no": "WB-20260422-1006",
+    "event_time": "2026-04-22T09:00:00+08:00",
+    "event_type": "PICKED_UP",
+    "event_desc": "快件已揽收",
+    "event_city": "深圳"
+  },
+  {
+    "waybill_no": "WB-20260422-1006",
+    "event_time": "2026-04-22T23:10:00+08:00",
+    "event_type": "ARRIVED_TRANSIT",
+    "event_desc": "快件已到达广州转运中心",
+    "event_city": "广州"
+  },
+  {
+    "waybill_no": "WB-20260422-1006",
+    "event_time": "2026-04-23T09:40:00+08:00",
+    "event_type": "DEPARTED_TRANSIT",
+    "event_desc": "快件离开广州转运中心",
+    "event_city": "广州"
+  },
+  {
+    "waybill_no": "WB-20260422-1006",
+    "event_time": "2026-04-23T10:15:00+08:00",
+    "event_type": "DELAYED_SCAN",
+    "event_desc": "干线转运延迟，等待下一次扫描",
+    "event_city": "长沙"
+  },
+  {
+    "waybill_no": "WB-20260423-1008",
+    "event_time": "2026-04-23T08:20:00+08:00",
+    "event_type": "PICKED_UP",
+    "event_desc": "快件已揽收",
+    "event_city": "成都"
+  },
+  {
+    "waybill_no": "WB-20260423-1008",
+    "event_time": "2026-04-24T19:10:00+08:00",
+    "event_type": "IN_TRANSIT",
+    "event_desc": "快件已到达康定营业部",
+    "event_city": "甘孜"
+  },
+  {
+    "waybill_no": "WB-20260423-1008",
+    "event_time": "2026-04-25T16:10:00+08:00",
+    "event_type": "SIGNED",
+    "event_desc": "客户本人签收",
+    "event_city": "甘孜"
+  }
+]

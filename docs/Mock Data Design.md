@@ -263,6 +263,9 @@ demo_cases
 |`additional_weight_fee`|续重费|
 |`volume_divisor`|体积重除数|
 |`remote_area_fee`|偏远地区附加费|
+|`timeout_grace_hours`|超时扣罚宽限小时|
+|`timeout_penalty_per_hour`|超时扣罚每小时金额|
+|`timeout_penalty_cap`|超时扣罚封顶金额|
 
 ### 5.12 `settlement_bills.json`
 
@@ -386,7 +389,7 @@ demo_cases
 |`shipments.json`|运单在途|
 |`tracking_events.json`|最后轨迹时间早于当前时间阈值|
 |`carriers.json`|提供结构化 SLA|
-|`fee_rules.json`|提供超时扣罚规则|
+|`fee_rules.json`|提供超时扣罚规则，至少包含 `timeout_grace_hours`、`timeout_penalty_per_hour`、`timeout_penalty_cap`|
 
 ### 7.4 D04 `abnormal_signed`
 

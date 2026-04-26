@@ -1,0 +1,68 @@
+[
+  {
+    "waybill_no": "WB-20260422-1003A",
+    "actual_weight_kg": 1.2,
+    "length_cm": 32,
+    "width_cm": 24,
+    "height_cm": 18,
+    "chargeable_weight_kg": 2.5,
+    "is_remote_area": false,
+    "value_added_services": []
+  },
+  {
+    "waybill_no": "WB-20260422-1003B",
+    "actual_weight_kg": 0.8,
+    "length_cm": 28,
+    "width_cm": 20,
+    "height_cm": 14,
+    "chargeable_weight_kg": 1.5,
+    "is_remote_area": false,
+    "value_added_services": []
+  },
+  {
+    "waybill_no": "WB-20260424-1004",
+    "actual_weight_kg": 2.2,
+    "length_cm": 55,
+    "width_cm": 40,
+    "height_cm": 10,
+    "chargeable_weight_kg": 4.0,
+    "is_remote_area": false,
+    "value_added_services": [
+      "signature_required"
+    ]
+  },
+  {
+    "waybill_no": "WB-20260423-1005",
+    "actual_weight_kg": 3.4,
+    "length_cm": 60,
+    "width_cm": 40,
+    "height_cm": 30,
+    "chargeable_weight_kg": 12.0,
+    "is_remote_area": false,
+    "value_added_services": [
+      "fragile_pack"
+    ]
+  },
+  {
+    "waybill_no": "WB-20260422-1006",
+    "actual_weight_kg": 1.4,
+    "length_cm": 35,
+    "width_cm": 25,
+    "height_cm": 20,
+    "chargeable_weight_kg": 3.0,
+    "is_remote_area": false,
+    "value_added_services": []
+  },
+  {
+    "waybill_no": "WB-20260423-1008",
+    "actual_weight_kg": 4.8,
+    "length_cm": 50,
+    "width_cm": 42,
+    "height_cm": 28,
+    "chargeable_weight_kg": 9.8,
+    "is_remote_area": true,
+    "value_added_services": [
+      "remote_delivery"
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "sku_code": "SKU-1001",
+    "sku_name": "降噪蓝牙耳机",
+    "category": "3C数码",
+    "unit_price": 299,
+    "status": "ACTIVE"
+  },
+  {
+    "sku_code": "SKU-1002",
+    "sku_name": "10000mAh 充电宝",
+    "category": "3C数码",
+    "unit_price": 109,
+    "status": "ACTIVE"
+  },
+  {
+    "sku_code": "SKU-1003",
+    "sku_name": "陶瓷马克杯",
+    "category": "家居日用",
+    "unit_price": 64.5,
+    "status": "ACTIVE"
+  },
+  {
+    "sku_code": "SKU-1004",
+    "sku_name": "护眼台灯",
+    "category": "家居日用",
+    "unit_price": 179,
+    "status": "ACTIVE"
+  },
+  {
+    "sku_code": "SKU-1005",
+    "sku_name": "高密度瑜伽垫",
+    "category": "运动户外",
+    "unit_price": 128,
+    "status": "ACTIVE"
+  },
+  {
+    "sku_code": "SKU-1006",
+    "sku_name": "防风冲锋衣",
+    "category": "服饰鞋包",
+    "unit_price": 899,
+    "status": "ACTIVE"
+  }
+]

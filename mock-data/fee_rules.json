@@ -1,0 +1,41 @@
+[
+  {
+    "carrier_code": "SF",
+    "service_level": "EXPRESS",
+    "first_weight_kg": 1,
+    "first_weight_fee": 18,
+    "additional_weight_unit_kg": 0.5,
+    "additional_weight_fee": 4,
+    "volume_divisor": 6000,
+    "remote_area_fee": 10,
+    "timeout_grace_hours": 2,
+    "timeout_penalty_per_hour": 3,
+    "timeout_penalty_cap": 30
+  },
+  {
+    "carrier_code": "YTO",
+    "service_level": "STANDARD",
+    "first_weight_kg": 1,
+    "first_weight_fee": 12,
+    "additional_weight_unit_kg": 0.5,
+    "additional_weight_fee": 3,
+    "volume_divisor": 6000,
+    "remote_area_fee": 8,
+    "timeout_grace_hours": 4,
+    "timeout_penalty_per_hour": 2.5,
+    "timeout_penalty_cap": 25
+  },
+  {
+    "carrier_code": "JD",
+    "service_level": "SAME_DAY",
+    "first_weight_kg": 1,
+    "first_weight_fee": 24,
+    "additional_weight_unit_kg": 0.5,
+    "additional_weight_fee": 6,
+    "volume_divisor": 6000,
+    "remote_area_fee": 12,
+    "timeout_grace_hours": 1,
+    "timeout_penalty_per_hour": 10,
+    "timeout_penalty_cap": 80
+  }
+]

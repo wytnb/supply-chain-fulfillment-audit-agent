@@ -1,0 +1,42 @@
+[
+  {
+    "bill_no": "BILL-20260424-3001",
+    "waybill_no": "WB-20260422-1003A",
+    "carrier_code": "SF",
+    "carrier_bill_amount": 30,
+    "billing_date": "2026-04-24T18:00:00+08:00",
+    "bill_status": "CONFIRMED"
+  },
+  {
+    "bill_no": "BILL-20260424-3002",
+    "waybill_no": "WB-20260422-1003B",
+    "carrier_code": "SF",
+    "carrier_bill_amount": 22,
+    "billing_date": "2026-04-24T18:05:00+08:00",
+    "bill_status": "CONFIRMED"
+  },
+  {
+    "bill_no": "BILL-20260425-3003",
+    "waybill_no": "WB-20260424-1004",
+    "carrier_code": "JD",
+    "carrier_bill_amount": 60,
+    "billing_date": "2026-04-25T09:30:00+08:00",
+    "bill_status": "CONFIRMED"
+  },
+  {
+    "bill_no": "BILL-20260425-3004",
+    "waybill_no": "WB-20260423-1005",
+    "carrier_code": "SF",
+    "carrier_bill_amount": 118,
+    "billing_date": "2026-04-25T10:20:00+08:00",
+    "bill_status": "PENDING_AUDIT"
+  },
+  {
+    "bill_no": "BILL-20260426-3005",
+    "waybill_no": "WB-20260423-1008",
+    "carrier_code": "YTO",
+    "carrier_bill_amount": 74,
+    "billing_date": "2026-04-26T08:10:00+08:00",
+    "bill_status": "CONFIRMED"
+  }
+]

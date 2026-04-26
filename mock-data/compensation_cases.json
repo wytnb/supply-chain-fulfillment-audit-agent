@@ -1,0 +1,12 @@
+[
+  {
+    "case_no": "COMP-20260424-4001",
+    "order_no": "O-20260424-1004",
+    "waybill_no": "WB-20260424-1004",
+    "exception_type": "abnormal_signed",
+    "damage_level": "NONE",
+    "evidence_status": "PENDING_CUSTOMER_EVIDENCE",
+    "compensation_amount": 899,
+    "manual_confirm_required": true
+  }
+]

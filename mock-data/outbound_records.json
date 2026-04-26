@@ -1,0 +1,44 @@
+[
+  {
+    "order_no": "O-20260420-1001",
+    "outbound_no": "OB-20260420-1001",
+    "outbound_status": "NOT_CREATED",
+    "outbound_time": null
+  },
+  {
+    "order_no": "O-20260424-1002",
+    "outbound_no": "OB-20260424-1002",
+    "outbound_status": "BLOCKED",
+    "outbound_time": null
+  },
+  {
+    "order_no": "O-20260421-1003",
+    "outbound_no": "OB-20260421-1003",
+    "outbound_status": "OUTBOUNDED",
+    "outbound_time": "2026-04-22T09:15:00+08:00"
+  },
+  {
+    "order_no": "O-20260424-1004",
+    "outbound_no": "OB-20260424-1004",
+    "outbound_status": "OUTBOUNDED",
+    "outbound_time": "2026-04-24T11:55:00+08:00"
+  },
+  {
+    "order_no": "O-20260423-1005",
+    "outbound_no": "OB-20260423-1005",
+    "outbound_status": "OUTBOUNDED",
+    "outbound_time": "2026-04-23T09:05:00+08:00"
+  },
+  {
+    "order_no": "O-20260422-1006",
+    "outbound_no": "OB-20260422-1006",
+    "outbound_status": "OUTBOUNDED",
+    "outbound_time": "2026-04-22T08:20:00+08:00"
+  },
+  {
+    "order_no": "O-20260423-1008",
+    "outbound_no": "OB-20260423-1008",
+    "outbound_status": "OUTBOUNDED",
+    "outbound_time": "2026-04-23T07:15:00+08:00"
+  }
+]

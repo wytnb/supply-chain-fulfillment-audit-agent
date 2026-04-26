@@ -1,0 +1,125 @@
+[
+  {
+    "ticket_no": "TK-20260426-5001",
+    "order_no": "O-20260420-1001",
+    "waybill_no": null,
+    "exception_type": "order_not_shipped_timeout",
+    "responsible_department": "warehouse",
+    "ticket_status": "DRAFT",
+    "suggested_actions": [
+      "立即核查拣货积压原因",
+      "优先释放仓内波次并确认最晚出库时间",
+      "向客服同步延迟说明口径"
+    ],
+    "process_records": [
+      {
+        "time": "2026-04-26T10:05:00+08:00",
+        "actor": "A08",
+        "action": "draft_created"
+      }
+    ]
+  },
+  {
+    "ticket_no": "TK-20260426-5002",
+    "order_no": "O-20260424-1002",
+    "waybill_no": null,
+    "exception_type": "inventory_shortage",
+    "responsible_department": "inventory_planning",
+    "ticket_status": "DRAFT",
+    "suggested_actions": [
+      "核查补货 ETA",
+      "评估跨仓调拨可行性",
+      "如无货可调则建议拆单或延迟发货"
+    ],
+    "process_records": [
+      {
+        "time": "2026-04-26T10:07:00+08:00",
+        "actor": "A08",
+        "action": "draft_created"
+      }
+    ]
+  },
+  {
+    "ticket_no": "TK-20260426-5003",
+    "order_no": "O-20260422-1006",
+    "waybill_no": "WB-20260422-1006",
+    "exception_type": "tracking_stagnation",
+    "responsible_department": "logistics",
+    "ticket_status": "OPEN",
+    "suggested_actions": [
+      "催办承运商恢复轨迹更新",
+      "按 SLA 计算超时小时并准备扣罚建议",
+      "必要时升级承运商管理人"
+    ],
+    "process_records": [
+      {
+        "time": "2026-04-26T09:10:00+08:00",
+        "actor": "ops_user_01",
+        "action": "carrier_followup_requested"
+      },
+      {
+        "time": "2026-04-26T10:08:00+08:00",
+        "actor": "A08",
+        "action": "draft_refreshed"
+      }
+    ]
+  },
+  {
+    "ticket_no": "TK-20260426-5004",
+    "order_no": "O-20260424-1004",
+    "waybill_no": "WB-20260424-1004",
+    "exception_type": "abnormal_signed",
+    "responsible_department": "manual_review",
+    "ticket_status": "OPEN",
+    "suggested_actions": [
+      "向客户收集未收到货证明",
+      "向承运商调取签收底单与派送说明",
+      "完备证据后再做赔付审核"
+    ],
+    "process_records": [
+      {
+        "time": "2026-04-25T09:30:00+08:00",
+        "actor": "customer_service_02",
+        "action": "customer_claim_received"
+      }
+    ]
+  },
+  {
+    "ticket_no": "TK-20260426-5005",
+    "order_no": "O-20260423-1005",
+    "waybill_no": "WB-20260423-1005",
+    "exception_type": "freight_bill_difference",
+    "responsible_department": "finance",
+    "ticket_status": "OPEN",
+    "suggested_actions": [
+      "按 packages 和 fee_rules 重算运费",
+      "核对 carrier_bill_amount 差额来源",
+      "形成对账异议建议"
+    ],
+    "process_records": [
+      {
+        "time": "2026-04-26T08:45:00+08:00",
+        "actor": "finance_user_01",
+        "action": "bill_flagged"
+      }
+    ]
+  },
+  {
+    "ticket_no": "TK-20260425-5099",
+    "order_no": "O-20260421-1003",
+    "waybill_no": "WB-20260422-1003B",
+    "exception_type": "freight_bill_difference",
+    "responsible_department": "finance",
+    "ticket_status": "CLOSED",
+    "suggested_actions": [
+      "作为已处理样本保留"
+    ],
+    "process_records": [
+      {
+        "time": "2026-04-25T16:00:00+08:00",
+        "actor": "finance_user_02",
+        "action": "reconciled"
+      }
+    ]
+  }
+]

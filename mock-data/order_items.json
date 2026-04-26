@@ -1,0 +1,90 @@
+[
+  {
+    "order_no": "O-20260420-1001",
+    "sku_code": "SKU-1001",
+    "sku_name": "降噪蓝牙耳机",
+    "qty": 1,
+    "unit_price": 299,
+    "line_amount": 299
+  },
+  {
+    "order_no": "O-20260424-1002",
+    "sku_code": "SKU-1003",
+    "sku_name": "陶瓷马克杯",
+    "qty": 2,
+    "unit_price": 64.5,
+    "line_amount": 129
+  },
+  {
+    "order_no": "O-20260421-1003",
+    "sku_code": "SKU-1004",
+    "sku_name": "护眼台灯",
+    "qty": 2,
+    "unit_price": 179,
+    "line_amount": 358
+  },
+  {
+    "order_no": "O-20260421-1003",
+    "sku_code": "SKU-1002",
+    "sku_name": "10000mAh 充电宝",
+    "qty": 1,
+    "unit_price": 110,
+    "line_amount": 110
+  },
+  {
+    "order_no": "O-20260424-1004",
+    "sku_code": "SKU-1006",
+    "sku_name": "防风冲锋衣",
+    "qty": 1,
+    "unit_price": 899,
+    "line_amount": 899
+  },
+  {
+    "order_no": "O-20260423-1005",
+    "sku_code": "SKU-1005",
+    "sku_name": "高密度瑜伽垫",
+    "qty": 2,
+    "unit_price": 128,
+    "line_amount": 256
+  },
+  {
+    "order_no": "O-20260423-1005",
+    "sku_code": "SKU-1002",
+    "sku_name": "10000mAh 充电宝",
+    "qty": 1,
+    "unit_price": 100,
+    "line_amount": 100
+  },
+  {
+    "order_no": "O-20260422-1006",
+    "sku_code": "SKU-1002",
+    "sku_name": "10000mAh 充电宝",
+    "qty": 1,
+    "unit_price": 109,
+    "line_amount": 109
+  },
+  {
+    "order_no": "O-20260422-1006",
+    "sku_code": "SKU-1003",
+    "sku_name": "陶瓷马克杯",
+    "qty": 1,
+    "unit_price": 80,
+    "line_amount": 80
+  },
+  {
+    "order_no": "O-20260425-1007",
+    "sku_code": "SKU-1001",
+    "sku_name": "降噪蓝牙耳机",
+    "qty": 1,
+    "unit_price": 299,
+    "line_amount": 299
+  },
+  {
+    "order_no": "O-20260423-1008",
+    "sku_code": "SKU-1006",
+    "sku_name": "防风冲锋衣",
+    "qty": 1,
+    "unit_price": 512,
+    "line_amount": 512
+  }
+]

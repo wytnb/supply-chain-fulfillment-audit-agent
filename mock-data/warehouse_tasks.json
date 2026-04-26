@@ -1,0 +1,72 @@
+[
+  {
+    "task_no": "WT-20260420-1001",
+    "order_no": "O-20260420-1001",
+    "warehouse_status": "PROCESSING",
+    "current_node": "PICKING",
+    "current_owner": "picker_team_03",
+    "last_update_time": "2026-04-21T20:30:00+08:00",
+    "exception_type": "picking_timeout",
+    "exception_reason": "picking_queue_backlog"
+  },
+  {
+    "task_no": "WT-20260424-1002",
+    "order_no": "O-20260424-1002",
+    "warehouse_status": "BLOCKED",
+    "current_node": "INVENTORY_LOCK",
+    "current_owner": "inventory_control",
+    "last_update_time": "2026-04-24T10:12:00+08:00",
+    "exception_type": "inventory_shortage",
+    "exception_reason": "warehouse_sku_out_of_stock"
+  },
+  {
+    "task_no": "WT-20260421-1003",
+    "order_no": "O-20260421-1003",
+    "warehouse_status": "COMPLETED",
+    "current_node": "HANDOVER",
+    "current_owner": "dispatch_team_01",
+    "last_update_time": "2026-04-22T09:20:00+08:00",
+    "exception_type": null,
+    "exception_reason": null
+  },
+  {
+    "task_no": "WT-20260424-1004",
+    "order_no": "O-20260424-1004",
+    "warehouse_status": "COMPLETED",
+    "current_node": "HANDOVER",
+    "current_owner": "dispatch_team_02",
+    "last_update_time": "2026-04-24T11:50:00+08:00",
+    "exception_type": null,
+    "exception_reason": null
+  },
+  {
+    "task_no": "WT-20260423-1005",
+    "order_no": "O-20260423-1005",
+    "warehouse_status": "COMPLETED",
+    "current_node": "HANDOVER",
+    "current_owner": "dispatch_team_01",
+    "last_update_time": "2026-04-23T09:00:00+08:00",
+    "exception_type": null,
+    "exception_reason": null
+  },
+  {
+    "task_no": "WT-20260422-1006",
+    "order_no": "O-20260422-1006",
+    "warehouse_status": "COMPLETED",
+    "current_node": "HANDOVER",
+    "current_owner": "dispatch_team_03",
+    "last_update_time": "2026-04-22T08:10:00+08:00",
+    "exception_type": null,
+    "exception_reason": null
+  },
+  {
+    "task_no": "WT-20260423-1008",
+    "order_no": "O-20260423-1008",
+    "warehouse_status": "COMPLETED",
+    "current_node": "HANDOVER",
+    "current_owner": "dispatch_team_05",
+    "last_update_time": "2026-04-23T07:10:00+08:00",
+    "exception_type": null,
+    "exception_reason": null
+  }
+]
