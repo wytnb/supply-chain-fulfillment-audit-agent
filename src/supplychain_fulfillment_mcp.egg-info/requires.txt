@@ -1,0 +1,5 @@
+mcp<2,>=1.27
+
+[dev]
+pytest<10,>=9
+pytest-asyncio<2,>=1.3

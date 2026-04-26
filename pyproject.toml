@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "supplychain-fulfillment-mcp"
+version = "0.1.0"
+description = "Mock MCP tools for supply chain fulfillment audit scenarios."
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.27,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9,<10",
+    "pytest-asyncio>=1.3,<2",
+]
+
+[project.scripts]
+supplychain-fulfillment-mcp = "supplychain_fulfillment_mcp.server:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

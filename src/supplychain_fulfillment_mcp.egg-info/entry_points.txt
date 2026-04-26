@@ -1,0 +1,2 @@
+[console_scripts]
+supplychain-fulfillment-mcp = supplychain_fulfillment_mcp.server:main
